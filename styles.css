@@ -155,6 +155,163 @@ body {
     color: white;
 }
 
+/* Model Selector */
+.model-selector-container {
+    position: relative;
+    -webkit-app-region: no-drag;
+}
+
+.model-selector-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: rgba(28, 28, 30, 0.6);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    backdrop-filter: var(--blur-medium);
+    -webkit-backdrop-filter: var(--blur-medium);
+}
+
+.model-selector-btn:hover {
+    background: rgba(28, 28, 30, 0.8);
+    border-color: var(--border-medium);
+}
+
+.model-selector-btn.active {
+    background: rgba(28, 28, 30, 0.9);
+    border-color: var(--raycast-accent);
+}
+
+.model-icon {
+    color: var(--text-secondary);
+}
+
+.selected-model {
+    color: var(--text-primary);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.chevron-icon {
+    color: var(--text-tertiary);
+    transition: transform 0.2s ease;
+}
+
+.model-selector-btn.active .chevron-icon {
+    transform: rotate(180deg);
+}
+
+/* Dropdown */
+.model-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 240px;
+    max-height: 320px;
+    overflow-y: auto;
+    background: rgba(28, 28, 30, 0.95);
+    backdrop-filter: var(--blur-strong);
+    -webkit-backdrop-filter: var(--blur-strong);
+    border: 1px solid var(--border-medium);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px) scale(0.96);
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 1000;
+}
+
+.model-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.model-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.model-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 8px 0;
+}
+
+.model-dropdown::-webkit-scrollbar-thumb {
+    background: var(--border-medium);
+    border-radius: 3px;
+}
+
+/* Model Groups */
+.model-group {
+    padding: 8px;
+}
+
+.model-group:not(:last-child) {
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.model-group-label {
+    padding: 8px 10px 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.model-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    margin: 2px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.model-option:hover {
+    background: rgba(44, 44, 46, 0.6);
+}
+
+.model-option.selected {
+    background: rgba(255, 99, 99, 0.15);
+}
+
+.model-option.selected::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--raycast-accent);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.model-name {
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.model-badge {
+    padding: 2px 8px;
+    background: rgba(255, 99, 99, 0.2);
+    color: var(--raycast-accent);
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
 /* Mensajes */
 .chat-messages {
     position: relative;

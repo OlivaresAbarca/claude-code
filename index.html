@@ -14,6 +14,55 @@
                 <div class="status-indicator"></div>
                 <span class="chat-title">Chat Flotante</span>
             </div>
+            <div class="model-selector-container">
+                <button class="model-selector-btn" id="modelSelectorBtn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" class="model-icon">
+                        <rect x="2" y="2" width="12" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="8" cy="8" r="2" fill="currentColor"/>
+                    </svg>
+                    <span class="selected-model" id="selectedModel">GPT-4</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" class="chevron-icon">
+                        <path d="M3 5 L6 8 L9 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="model-dropdown" id="modelDropdown">
+                    <div class="model-group">
+                        <div class="model-group-label">OpenAI</div>
+                        <div class="model-option" data-model="gpt-4" data-provider="openai">
+                            <span class="model-name">GPT-4</span>
+                            <span class="model-badge">Recomendado</span>
+                        </div>
+                        <div class="model-option" data-model="gpt-4-turbo" data-provider="openai">
+                            <span class="model-name">GPT-4 Turbo</span>
+                        </div>
+                        <div class="model-option" data-model="gpt-3.5-turbo" data-provider="openai">
+                            <span class="model-name">GPT-3.5 Turbo</span>
+                        </div>
+                    </div>
+                    <div class="model-group">
+                        <div class="model-group-label">Anthropic</div>
+                        <div class="model-option" data-model="claude-3-opus" data-provider="anthropic">
+                            <span class="model-name">Claude 3 Opus</span>
+                            <span class="model-badge">Más capaz</span>
+                        </div>
+                        <div class="model-option" data-model="claude-3-sonnet" data-provider="anthropic">
+                            <span class="model-name">Claude 3 Sonnet</span>
+                        </div>
+                        <div class="model-option" data-model="claude-3-haiku" data-provider="anthropic">
+                            <span class="model-name">Claude 3 Haiku</span>
+                        </div>
+                    </div>
+                    <div class="model-group">
+                        <div class="model-group-label">Google</div>
+                        <div class="model-option" data-model="gemini-pro" data-provider="google">
+                            <span class="model-name">Gemini Pro</span>
+                        </div>
+                        <div class="model-option" data-model="gemini-ultra" data-provider="google">
+                            <span class="model-name">Gemini Ultra</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="header-actions">
                 <button class="header-btn minimize-btn" id="minimizeBtn">
                     <svg width="12" height="12" viewBox="0 0 12 12">

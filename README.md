@@ -24,6 +24,7 @@ La interfaz presenta un diseño profesional, funcional y elegante inspirado en R
 - ⚡ Acento rojo Raycast (#FF6363) en indicadores y botones
 - 💎 Glassmorphism fuerte con blur 40px y saturación 180%
 - 🪟 **Transparencia real** - puedes ver a través de la ventana
+- 🤖 **Selector de modelos IA** - dropdown agrupado por proveedor (OpenAI, Anthropic, Google)
 - 🎯 Mensajes con hover state - fondo cambia a rgba(44, 44, 46, 0.4)
 - 🔴 Avatar cuadrado con bordes redondeados y acento rojo
 - ⚪ Sin diferencias visuales entre mensajes enviados/recibidos
@@ -83,6 +84,12 @@ npm start
 
 ### ✅ Componentes
 - Header con indicador de estado pulsante
+- **Selector de modelos IA** con dropdown agrupado por proveedor
+  - OpenAI: GPT-4, GPT-4 Turbo, GPT-3.5 Turbo
+  - Anthropic: Claude 3 Opus, Claude 3 Sonnet, Claude 3 Haiku
+  - Google: Gemini Pro, Gemini Ultra
+  - Badges para modelos destacados
+  - Animación spring al seleccionar
 - Área de mensajes con scroll personalizado
 - Mensajes del asistente (iridiscentes)
 - Mensajes del usuario (cálidos)
@@ -92,11 +99,13 @@ npm start
 - Avatares con gradientes SVG
 
 ### ✅ Interactividad
+- Selector de modelos con dropdown animado (click para abrir/cerrar)
 - Enter para enviar, Shift+Enter para nueva línea
 - Respuestas simuladas con delay
 - Focus automático en input
 - Scroll automático al recibir mensajes
 - Feedback visual en todos los clics
+- Click fuera del dropdown lo cierra automáticamente
 
 ### 🔜 Pendiente (Lógica)
 - Conexión con backend/API

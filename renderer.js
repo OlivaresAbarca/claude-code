@@ -193,6 +193,84 @@ window.addEventListener('DOMContentLoaded', () => {
     scrollToBottom();
 });
 
+// Model Selector Dropdown
+const modelSelectorBtn = document.getElementById('modelSelectorBtn');
+const modelDropdown = document.getElementById('modelDropdown');
+const selectedModelSpan = document.getElementById('selectedModel');
+const modelOptions = document.querySelectorAll('.model-option');
+
+// Toggle dropdown
+modelSelectorBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isActive = modelDropdown.classList.contains('active');
+
+    if (isActive) {
+        closeModelDropdown();
+    } else {
+        openModelDropdown();
+    }
+});
+
+// Open dropdown
+function openModelDropdown() {
+    modelDropdown.classList.add('active');
+    modelSelectorBtn.classList.add('active');
+}
+
+// Close dropdown
+function closeModelDropdown() {
+    modelDropdown.classList.remove('active');
+    modelSelectorBtn.classList.remove('active');
+}
+
+// Select model
+modelOptions.forEach(option => {
+    option.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        // Remove selected class from all options
+        modelOptions.forEach(opt => opt.classList.remove('selected'));
+
+        // Add selected class to clicked option
+        option.classList.add('selected');
+
+        // Update button text
+        const modelName = option.querySelector('.model-name').textContent;
+        selectedModelSpan.textContent = modelName;
+
+        // Get model data
+        const model = option.dataset.model;
+        const provider = option.dataset.provider;
+
+        console.log(`✅ Modelo seleccionado: ${modelName} (${provider}/${model})`);
+
+        // Close dropdown with spring animation
+        springAnimation(option, () => {
+            closeModelDropdown();
+        });
+    });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    if (!modelSelectorBtn.contains(e.target) && !modelDropdown.contains(e.target)) {
+        closeModelDropdown();
+    }
+});
+
+// Prevent dropdown from closing when clicking inside it
+modelDropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Set initial selected model
+window.addEventListener('DOMContentLoaded', () => {
+    const defaultModel = document.querySelector('.model-option[data-model="gpt-4"]');
+    if (defaultModel) {
+        defaultModel.classList.add('selected');
+    }
+});
+
 // Add some example interactions on load (demo purposes)
 window.addEventListener('DOMContentLoaded', () => {
     console.log('⚡ Chat Flotante - Estilo Raycast');
@@ -206,6 +284,7 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log('  - Sombras profundas pero suaves');
     console.log('  - Espaciado compacto y funcional');
     console.log('  - Transiciones rápidas y precisas (0.15s)');
+    console.log('  - Selector de modelos con agrupación por proveedor');
     console.log('');
     console.log('🚀 Profesional, funcional y elegante');
 });
