@@ -23,7 +23,8 @@ La interfaz presenta un diseño profesional, funcional y elegante inspirado en R
 - 🌑 Tema oscuro profesional (#1C1C1E background)
 - ⚡ Acento rojo Raycast (#FF6363) en indicadores y botones
 - 💎 Glassmorphism fuerte con blur 40px y saturación 180%
-- 🎯 Mensajes con hover state - fondo cambia a #2C2C2E
+- 🪟 **Transparencia real** - puedes ver a través de la ventana
+- 🎯 Mensajes con hover state - fondo cambia a rgba(44, 44, 46, 0.4)
 - 🔴 Avatar cuadrado con bordes redondeados y acento rojo
 - ⚪ Sin diferencias visuales entre mensajes enviados/recibidos
 - 💨 Transiciones rápidas (0.15s) para respuesta instantánea
@@ -34,7 +35,7 @@ La interfaz presenta un diseño profesional, funcional y elegante inspirado en R
 - 🎯 Controles de ventana con hover en #3A3A3C
 - 📱 Espaciado compacto y eficiente
 - 🚀 Diseño optimizado para productividad
-- 🎨 Header y footer con superficie elevada (#2C2C2E)
+- 🎨 Header y footer con transparencia y backdrop-filter
 
 ## Estructura del Proyecto
 
@@ -120,21 +121,22 @@ npm start
 
 ## 📝 Notas de Desarrollo
 
-Este MVP se enfoca en **productividad y funcionalidad** inspirado en Raycast. El diseño oscuro con blur profundo y acento rojo crea una experiencia profesional y elegante. Cada interacción es rápida y precisa.
+Este MVP se enfoca en **productividad y funcionalidad** inspirado en Raycast. El diseño oscuro con blur profundo, transparencia real y acento rojo crea una experiencia profesional y elegante. Cada interacción es rápida y precisa. La ventana es verdaderamente transparente, permitiendo ver el contenido detrás mientras el glassmorphism mantiene la legibilidad.
 
-**Filosofía**: "Profesional, funcional y elegante" - Inspirado en herramientas de productividad modernas.
+**Filosofía**: "Profesional, funcional y elegante" - Inspirado en herramientas de productividad modernas con transparencia flotante.
 
 La lógica de negocio (backend, API, WebSocket, autenticación) se implementará en fases posteriores, manteniendo esta base visual de Raycast como fundamento.
 
 ## 🖼 Preview
 
 La aplicación presenta:
-- **Ventana**: 400x600px, flotante, siempre visible
-- **Fondo**: Oscuro con blur (#1C1C1E con backdrop-filter)
-- **Mensajes**: Lista compacta con hover states
-- **Input**: Campo oscuro con focus ring rojo
+- **Ventana**: 400x600px, flotante, siempre visible, **transparente**
+- **Fondo**: Oscuro con blur y transparencia real (rgba con backdrop-filter)
+- **Mensajes**: Lista compacta con hover states transparentes
+- **Input**: Campo oscuro semi-transparente con focus ring rojo
 - **Controles**: Botones cuadrados con bordes redondeados
 - **Paleta**: Grises oscuros con acento rojo (#FF6363)
+- **Efecto**: Glassmorphism - ves a través de la ventana con blur 20-40px
 
 ## 🎨 Personalización
 

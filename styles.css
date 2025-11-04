@@ -46,11 +46,11 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    background: rgba(28, 28, 30, 0.85);
+    background: rgba(28, 28, 30, 0.7);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border-subtle);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: var(--blur-strong);
     -webkit-backdrop-filter: var(--blur-strong);
 }
@@ -77,7 +77,9 @@ body {
 .chat-header {
     position: relative;
     z-index: 10;
-    background: var(--raycast-surface);
+    background: rgba(44, 44, 46, 0.6);
+    backdrop-filter: var(--blur-medium);
+    -webkit-backdrop-filter: var(--blur-medium);
     padding: 12px 16px;
     display: flex;
     justify-content: space-between;
@@ -164,7 +166,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    background: var(--raycast-bg);
+    background: transparent;
 }
 
 .chat-messages::-webkit-scrollbar {
@@ -207,7 +209,7 @@ body {
 }
 
 .message:hover {
-    background: var(--raycast-surface);
+    background: rgba(44, 44, 46, 0.4);
 }
 
 .message.sent {
@@ -316,7 +318,9 @@ body {
     position: relative;
     z-index: 10;
     padding: 12px 16px 16px;
-    background: var(--raycast-surface);
+    background: rgba(44, 44, 46, 0.5);
+    backdrop-filter: var(--blur-medium);
+    -webkit-backdrop-filter: var(--blur-medium);
     border-top: 1px solid var(--border-subtle);
 }
 
@@ -324,7 +328,9 @@ body {
     display: flex;
     gap: 8px;
     align-items: center;
-    background: var(--raycast-bg);
+    background: rgba(28, 28, 30, 0.6);
+    backdrop-filter: var(--blur-medium);
+    -webkit-backdrop-filter: var(--blur-medium);
     border-radius: 10px;
     padding: 10px 12px;
     border: 1px solid var(--border-subtle);
