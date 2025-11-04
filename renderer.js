@@ -109,14 +109,12 @@ function addMessageToChat(type, author, text, time) {
                 <svg width="36" height="36" viewBox="0 0 36 36">
                     <defs>
                         <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#6B8AFF;stop-opacity:1" />
-                            <stop offset="50%" style="stop-color:#B57BFF;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#C79EFF;stop-opacity:1" />
+                            <stop offset="0%" style="stop-color:#E8EFFF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#F3EEFF;stop-opacity:1" />
                         </linearGradient>
                     </defs>
                     <circle cx="18" cy="18" r="18" fill="url(#${gradientId})"/>
-                    <circle cx="18" cy="18" r="17" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>
-                    <text x="18" y="24" text-anchor="middle" fill="white" font-size="16" font-weight="600" font-family="-apple-system, SF Pro Rounded">A</text>
+                    <text x="18" y="24" text-anchor="middle" fill="#6B8AFF" font-size="16" font-weight="600" font-family="-apple-system, SF Pro Rounded">A</text>
                 </svg>
             </div>
         `;
@@ -204,19 +202,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Add some example interactions on load (demo purposes)
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('🌈 Chat Flotante Vibrante - Estilo Sky/Arc');
-    console.log('✨ Características implementadas:');
-    console.log('  - Gradientes vibrantes animados (hue-rotate)');
-    console.log('  - Efecto de granularidad/noise con SVG');
-    console.log('  - Mesh gradients flotantes multicapa');
-    console.log('  - Paleta vibrante: Electric Blue, Vivid Purple, Coral Pink');
-    console.log('  - Mensajes con fondos translúcidos y glow');
-    console.log('  - Animaciones spring orgánicas');
-    console.log('  - Scroll suave con easing');
-    console.log('  - Avatares con gradientes vibrantes');
-    console.log('  - Indicador de estado con glow pulsante');
-    console.log('  - Input con focus glow azul/púrpura');
-    console.log('  - Botón de envío con gradiente vibrante');
+    console.log('✨ Chat Flotante Minimalista');
+    console.log('🎨 Características implementadas:');
+    console.log('  - Diseño minimalista limpio y refinado');
+    console.log('  - Gradientes sutiles en bordes superior e inferior');
+    console.log('  - Paleta neutral con toques de color');
+    console.log('  - Mensajes con bordes gradiente sutiles');
+    console.log('  - Sombras suaves y discretas');
+    console.log('  - Animaciones sutiles y refinadas');
+    console.log('  - Focus ring azul minimalista en input');
+    console.log('  - Avatares con gradiente suave azul-púrpura');
+    console.log('  - Sin efectos excesivos o distractores');
     console.log('');
-    console.log('🎨 Inspirado en Sky (ChatGPT) y Arc Browser');
+    console.log('💎 Elegancia en la simplicidad');
 });

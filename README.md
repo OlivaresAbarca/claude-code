@@ -1,39 +1,39 @@
 # Chat Flotante MVP - Electron
 
-MVP de un chat flotante desarrollado en Electron con diseño vibrante inspirado en **Sky (ChatGPT Voice)** y **Arc Browser**. **Solo UI - sin lógica de backend**.
+MVP de un chat flotante desarrollado en Electron con **diseño minimalista** y **gradientes sutiles**. **Solo UI - sin lógica de backend**.
 
 ## 🎨 Filosofía de Diseño
 
-La interfaz presenta un diseño flotante y vibrante, inspirado en la estética moderna de Sky y Arc Browser. Transmite energía, creatividad y dinamismo con gradientes fluidos y efectos de granularidad que le dan vida y profundidad.
+La interfaz presenta un diseño minimalista, limpio y elegante. Los gradientes sutiles aparecen delicadamente en los bordes, creando profundidad sin distraer. Cada elemento está cuidadosamente refinado para transmitir calma, claridad y sofisticación.
 
 ### Elementos Visuales Clave:
-- **Gradientes vibrantes animados** con 5 colores que rotan suavemente (hue-rotate)
-- **Efecto de granularidad/noise** con SVG fractal para textura orgánica
-- **Mesh gradients flotantes** con múltiples capas radiales que se mueven
-- **Paleta vibrante**: Electric Blue (#6B8AFF), Vivid Purple (#B57BFF), Coral Pink (#FF6B9D), Sky Cyan (#5DFDCB)
-- **Vidrio esmerilado con saturación alta** para intensificar colores
-- **Sombras con glow** para dar sensación de luz emanando
-- **Mensajes translúcidos** con gradientes vibrantes y bordes luminosos
-- **Microanimaciones spring** en cada interacción
+- **Fondo blanco limpio** con gradientes sutiles en bordes superior e inferior
+- **Gradientes delicados** en tonos azul y púrpura muy suaves (#E8EFFF, #F3EEFF)
+- **Bordes con gradiente** en mensajes del asistente (casi imperceptibles)
+- **Paleta neutral** con acentos de color discretos
+- **Sombras suaves** que apenas se notan pero añaden profundidad
+- **Sin efectos excesivos** - sin noise, sin mesh gradients, sin glow
+- **Animaciones sutiles** sin bounce exagerado
+- **Focus ring delicado** en azul cuando se interactúa
 - **Tipografía redondeada** (SF Pro Rounded) para calidez
 
 ## ✨ Características UI
 
-- 🌈 Gradientes vibrantes con animación hue-rotate continua
-- 🎨 Efecto de granularidad/noise con SVG fractal (mix-blend-mode: overlay)
-- 🌊 Mesh gradients flotantes con 4 capas radiales animadas
-- 💎 Glassmorphism con blur 60px y saturación 200%
-- ✨ Mensajes con fondos translúcidos vibrantes y glow shadows
-- 🔵 Mensajes del asistente: gradiente azul-púrpura con efecto de luz
-- 🔴 Mensajes del usuario: gradiente coral-melocotón con warmth
-- 💫 Animaciones spring orgánicas (cubic-bezier)
+- 🤍 Fondo blanco limpio con gradientes sutiles en los bordes
+- 🎨 Gradientes delicados que aparecen solo al inicio y final
+- 💎 Glassmorphism suave con blur 20px (no excesivo)
+- ✨ Mensajes con fondos neutros y bordes sutiles
+- 🔵 Mensajes del asistente: borde gradiente azul-púrpura casi imperceptible
+- ⚪ Mensajes del usuario: fondo blanco con borde simple
+- 💫 Animaciones sutiles sin bounce exagerado
 - 💬 Scroll suave con easing personalizado
-- ✏️ Input con glow azul/púrpura al enfocar
-- 🟢 Indicador de estado con glow pulsante cyan/azul
-- ⌨️ Indicador de escritura con bounce spring y glow
-- 🎯 Controles de ventana con backdrop-filter
+- ✏️ Input con focus ring azul minimalista al enfocar
+- 🟢 Indicador de estado con gradiente suave y pulso delicado
+- ⌨️ Indicador de escritura con dots simples en gris
+- 🎯 Controles de ventana minimalistas con hover sutil
 - 📱 Responsive y adaptativo
 - ♿ Soporte para prefers-reduced-motion
+- 🧘 Sin distracciones - diseño limpio y elegante
 
 ## Estructura del Proyecto
 
@@ -119,39 +119,46 @@ npm start
 
 ## 📝 Notas de Desarrollo
 
-Este MVP se enfoca **exclusivamente en la experiencia visual y sensorial**. Cada elemento respira, flota y responde al usuario con microanimaciones orgánicas. La implementación busca el equilibrio entre sofisticación técnica y accesibilidad emocional.
+Este MVP se enfoca en **elegancia a través de la simplicidad**. El diseño minimalista pone el contenido primero, con gradientes sutiles que añaden profundidad sin distraer. Cada elemento está refinado para transmitir calma y claridad.
 
-La lógica de negocio (backend, API, WebSocket, autenticación) se implementará en fases posteriores, manteniendo esta base visual como fundamento.
+**Filosofía**: "Menos es más" - Sin efectos excesivos, sin distracciones innecesarias. Solo lo esencial, ejecutado a la perfección.
+
+La lógica de negocio (backend, API, WebSocket, autenticación) se implementará en fases posteriores, manteniendo esta base visual limpia como fundamento.
 
 ## 🖼 Preview
 
 La aplicación presenta:
 - **Ventana**: 400x600px, flotante, siempre visible
-- **Fondo**: Gradiente vibrante de 5 colores con animación hue-rotate y mesh flotante
-- **Textura**: Efecto de granularidad SVG con fractal noise (overlay)
-- **Mensajes**: 3 ejemplos precargados con fondos translúcidos y glow
-- **Input**: Campo expandible con glow azul/púrpura al enfocar
-- **Controles**: Botones translúcidos con microinteracciones
-- **Paleta**: Electric Blue (#6B8AFF), Vivid Purple (#B57BFF), Coral Pink (#FF6B9D), Sky Cyan (#5DFDCB)
+- **Fondo**: Blanco limpio (#FFFFFF) con gradientes sutiles en bordes
+- **Mensajes**: 3 ejemplos precargados con fondos neutros
+- **Input**: Campo expandible con borde azul al enfocar
+- **Controles**: Botones minimalistas con hover discreto
+- **Paleta**: Tonos suaves azul (#E8EFFF) y púrpura (#F3EEFF)
 
 ## 🎨 Personalización
 
-Las variables CSS están centralizadas en `:root` (styles.css:7-30):
+Las variables CSS están centralizadas en `:root` (styles.css:7-32):
 
 ```css
---electric-blue: #6B8AFF;     /* Azul eléctrico */
---vivid-purple: #B57BFF;      /* Púrpura vibrante */
---coral-pink: #FF6B9D;        /* Rosa coral */
---sky-cyan: #5DFDCB;          /* Cyan cielo */
---lavender-dream: #C79EFF;    /* Lavanda soñador */
---peach: #FFAD87;             /* Melocotón */
+/* Colores Sutiles */
+--soft-blue: #E8EFFF;         /* Azul suave para gradientes */
+--soft-purple: #F3EEFF;       /* Púrpura suave para gradientes */
+--soft-pink: #FFECF2;         /* Rosa suave (opcional) */
+
+/* Acentos */
+--accent-blue: #6B8AFF;       /* Azul para focus y botones */
+--accent-purple: #B57BFF;     /* Púrpura para gradientes activos */
+
+/* Backgrounds */
+--bg-primary: #FAFBFC;        /* Fondo mensajes asistente */
+--bg-secondary: #FFFFFF;      /* Fondo principal y mensajes usuario */
 ```
 
 ### Efectos Clave:
-- **Gradiente principal**: `.chat-container` - 5 colores con saturación 200%
-- **Animación hue-rotate**: `gradientShift` 15s con saturación dinámica
-- **Noise texture**: SVG inline con feTurbulence (baseFrequency: 0.9)
-- **Mesh gradients**: 4 capas radiales con animación `meshFloat` 20s
-- **Blur intensity**: `backdrop-filter: blur(60px) saturate(200%)`
-- **Animaciones**: Todas usan `cubic-bezier(0.34, 1.56, 0.64, 1)` para efecto spring
+- **Gradiente superior**: `.chat-container::before` - gradiente sutil que se desvanece
+- **Gradiente inferior**: `.chat-container::after` - gradiente sutil que se desvanece
+- **Borde gradiente**: Mensajes del asistente con mask CSS
+- **Blur suave**: `backdrop-filter: blur(20px)` en header/footer
+- **Sombras minimalistas**: `box-shadow` muy sutiles (0.04-0.08 opacity)
+- **Animaciones**: Spring suaves sin exageración
 - **Tamaño de ventana**: `main.js` líneas 8-9
