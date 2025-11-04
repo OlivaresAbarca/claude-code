@@ -26,9 +26,10 @@
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
     --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.45);
 
-    /* Blur Effects */
-    --blur-strong: blur(40px) saturate(180%);
-    --blur-medium: blur(20px) saturate(150%);
+    /* Blur Effects - Ultra Strong */
+    --blur-strong: blur(80px) saturate(200%);
+    --blur-medium: blur(50px) saturate(180%);
+    --blur-light: blur(30px) saturate(160%);
 }
 
 body {
@@ -46,11 +47,11 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    background: rgba(28, 28, 30, 0.7);
+    background: rgba(28, 28, 30, 0.4);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
     backdrop-filter: var(--blur-strong);
     -webkit-backdrop-filter: var(--blur-strong);
 }
@@ -73,18 +74,18 @@ body {
     z-index: 0;
 }
 
-/* Header */
+/* Header - Ultra Thin */
 .chat-header {
     position: relative;
     z-index: 10;
-    background: rgba(44, 44, 46, 0.6);
+    background: rgba(44, 44, 46, 0.3);
     backdrop-filter: var(--blur-medium);
     -webkit-backdrop-filter: var(--blur-medium);
-    padding: 12px 16px;
+    padding: 10px 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 0.5px solid var(--border-subtle);
     -webkit-app-region: drag;
 }
 
@@ -114,9 +115,9 @@ body {
 
 .chat-title {
     color: var(--text-primary);
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: -0.02em;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: -0.01em;
 }
 
 .header-actions {
@@ -164,18 +165,18 @@ body {
 .model-selector-btn {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
-    background: rgba(28, 28, 30, 0.6);
-    border: 1px solid var(--border-subtle);
+    gap: 5px;
+    padding: 5px 9px;
+    background: rgba(28, 28, 30, 0.3);
+    border: 0.5px solid var(--border-subtle);
     border-radius: 8px;
     color: var(--text-primary);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.15s ease;
-    backdrop-filter: var(--blur-medium);
-    -webkit-backdrop-filter: var(--blur-medium);
+    backdrop-filter: var(--blur-light);
+    -webkit-backdrop-filter: var(--blur-light);
 }
 
 .model-selector-btn:hover {
@@ -194,7 +195,7 @@ body {
 
 .selected-model {
     color: var(--text-primary);
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.01em;
 }
 
@@ -207,18 +208,18 @@ body {
     transform: rotate(180deg);
 }
 
-/* Dropdown */
+/* Dropdown - Ultra Blur */
 .model-dropdown {
     position: absolute;
     top: calc(100% + 8px);
     right: 0;
-    width: 240px;
+    width: 230px;
     max-height: 320px;
     overflow-y: auto;
-    background: rgba(28, 28, 30, 0.95);
+    background: rgba(28, 28, 30, 0.5);
     backdrop-filter: var(--blur-strong);
     -webkit-backdrop-filter: var(--blur-strong);
-    border: 1px solid var(--border-medium);
+    border: 0.5px solid var(--border-medium);
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
     opacity: 0;
@@ -270,9 +271,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 12px;
-    margin: 2px 0;
-    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 1px 0;
+    border-radius: 7px;
     cursor: pointer;
     transition: all 0.15s ease;
 }
@@ -296,8 +297,8 @@ body {
 
 .model-name {
     color: var(--text-primary);
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
     letter-spacing: -0.01em;
 }
 
@@ -312,23 +313,23 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* WebSearch Toggle Button */
+/* WebSearch Toggle Button - Ultra Thin */
 .websearch-toggle-btn {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
+    gap: 5px;
+    padding: 5px 9px;
     margin-left: 8px;
-    background: rgba(28, 28, 30, 0.6);
-    border: 1px solid var(--border-subtle);
+    background: rgba(28, 28, 30, 0.3);
+    border: 0.5px solid var(--border-subtle);
     border-radius: 8px;
     color: var(--text-secondary);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.15s ease;
-    backdrop-filter: var(--blur-medium);
-    -webkit-backdrop-filter: var(--blur-medium);
+    backdrop-filter: var(--blur-light);
+    -webkit-backdrop-filter: var(--blur-light);
     -webkit-app-region: no-drag;
 }
 
@@ -375,7 +376,7 @@ body {
 
 .websearch-label {
     color: inherit;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.01em;
 }
 
@@ -537,27 +538,27 @@ body {
     }
 }
 
-/* Input Container */
+/* Input Container - Ultra Thin */
 .chat-input-container {
     position: relative;
     z-index: 10;
-    padding: 12px 16px 16px;
-    background: rgba(44, 44, 46, 0.5);
+    padding: 10px 14px 14px;
+    background: rgba(44, 44, 46, 0.3);
     backdrop-filter: var(--blur-medium);
     -webkit-backdrop-filter: var(--blur-medium);
-    border-top: 1px solid var(--border-subtle);
+    border-top: 0.5px solid var(--border-subtle);
 }
 
 .chat-input-wrapper {
     display: flex;
-    gap: 8px;
+    gap: 7px;
     align-items: center;
-    background: rgba(28, 28, 30, 0.6);
-    backdrop-filter: var(--blur-medium);
-    -webkit-backdrop-filter: var(--blur-medium);
+    background: rgba(28, 28, 30, 0.4);
+    backdrop-filter: var(--blur-light);
+    -webkit-backdrop-filter: var(--blur-light);
     border-radius: 10px;
-    padding: 10px 12px;
-    border: 1px solid var(--border-subtle);
+    padding: 9px 11px;
+    border: 0.5px solid var(--border-subtle);
     transition: all 0.15s ease;
 }
 
