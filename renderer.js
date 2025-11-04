@@ -109,12 +109,13 @@ function addMessageToChat(type, author, text, time) {
                 <svg width="36" height="36" viewBox="0 0 36 36">
                     <defs>
                         <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#A8D5E2;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#D4C5E2;stop-opacity:1" />
+                            <stop offset="0%" style="stop-color:#6B8AFF;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#B57BFF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#C79EFF;stop-opacity:1" />
                         </linearGradient>
                     </defs>
-                    <circle cx="18" cy="18" r="18" fill="url(#${gradientId})" opacity="0.9"/>
-                    <circle cx="18" cy="18" r="17" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+                    <circle cx="18" cy="18" r="18" fill="url(#${gradientId})"/>
+                    <circle cx="18" cy="18" r="17" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>
                     <text x="18" y="24" text-anchor="middle" fill="white" font-size="16" font-weight="600" font-family="-apple-system, SF Pro Rounded">A</text>
                 </svg>
             </div>
@@ -203,19 +204,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Add some example interactions on load (demo purposes)
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('🎨 Chat Flotante Refinado - Cargado exitosamente');
-    console.log('✨ Características UI implementadas:');
-    console.log('  - Diseño glassmorphism inspirado en macOS');
+    console.log('🌈 Chat Flotante Vibrante - Estilo Sky/Arc');
+    console.log('✨ Características implementadas:');
+    console.log('  - Gradientes vibrantes animados (hue-rotate)');
+    console.log('  - Efecto de granularidad/noise con SVG');
+    console.log('  - Mesh gradients flotantes multicapa');
+    console.log('  - Paleta vibrante: Electric Blue, Vivid Purple, Coral Pink');
+    console.log('  - Mensajes con fondos translúcidos y glow');
     console.log('  - Animaciones spring orgánicas');
-    console.log('  - Mensajes iridiscentes (asistente) y cálidos (usuario)');
     console.log('  - Scroll suave con easing');
-    console.log('  - Auto-resize del textarea');
-    console.log('  - Microinteracciones en todos los botones');
-    console.log('  - Halo ambiental animado');
-    console.log('  - Avatares con gradientes refinados');
-    console.log('  - Indicador de escritura con animación spring');
-    console.log('  - Controles de ventana con feedback visual');
-    console.log('  - Respuestas simuladas para demo');
+    console.log('  - Avatares con gradientes vibrantes');
+    console.log('  - Indicador de estado con glow pulsante');
+    console.log('  - Input con focus glow azul/púrpura');
+    console.log('  - Botón de envío con gradiente vibrante');
     console.log('');
-    console.log('🎭 La interfaz respira, flota y se adapta al usuario');
+    console.log('🎨 Inspirado en Sky (ChatGPT) y Arc Browser');
 });
