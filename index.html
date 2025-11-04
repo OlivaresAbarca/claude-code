@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Flotante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header del chat -->
+        <div class="chat-header">
+            <div class="header-left">
+                <div class="status-indicator"></div>
+                <span class="chat-title">Chat Flotante</span>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn minimize-btn" id="minimizeBtn">
+                    <svg width="12" height="12" viewBox="0 0 12 12">
+                        <line x1="0" y1="6" x2="12" y2="6" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="header-btn close-btn" id="closeBtn">
+                    <svg width="12" height="12" viewBox="0 0 12 12">
+                        <line x1="0" y1="0" x2="12" y2="12" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="0" x2="0" y2="12" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Área de mensajes -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Mensajes de ejemplo -->
+            <div class="message received">
+                <div class="message-avatar">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <circle cx="16" cy="16" r="16" fill="#4A90E2"/>
+                        <text x="16" y="21" text-anchor="middle" fill="white" font-size="14" font-weight="bold">A</text>
+                    </svg>
+                </div>
+                <div class="message-content">
+                    <div class="message-header">
+                        <span class="message-author">Asistente</span>
+                        <span class="message-time">10:30</span>
+                    </div>
+                    <div class="message-text">¡Hola! ¿En qué puedo ayudarte hoy?</div>
+                </div>
+            </div>
+
+            <div class="message sent">
+                <div class="message-content">
+                    <div class="message-header">
+                        <span class="message-author">Tú</span>
+                        <span class="message-time">10:31</span>
+                    </div>
+                    <div class="message-text">Necesito ayuda con mi proyecto</div>
+                </div>
+            </div>
+
+            <div class="message received">
+                <div class="message-avatar">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <circle cx="16" cy="16" r="16" fill="#4A90E2"/>
+                        <text x="16" y="21" text-anchor="middle" fill="white" font-size="14" font-weight="bold">A</text>
+                    </svg>
+                </div>
+                <div class="message-content">
+                    <div class="message-header">
+                        <span class="message-author">Asistente</span>
+                        <span class="message-time">10:31</span>
+                    </div>
+                    <div class="message-text">¡Por supuesto! Cuéntame más sobre tu proyecto y con gusto te ayudaré.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicador de escritura -->
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        </div>
+
+        <!-- Input de mensaje -->
+        <div class="chat-input-container">
+            <div class="chat-input-wrapper">
+                <button class="input-action-btn emoji-btn" id="emojiBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="7" cy="8" r="1.5" fill="currentColor"/>
+                        <circle cx="13" cy="8" r="1.5" fill="currentColor"/>
+                        <path d="M6 12 Q10 15 14 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <textarea
+                    class="chat-input"
+                    id="chatInput"
+                    placeholder="Escribe un mensaje..."
+                    rows="1"
+                ></textarea>
+                <button class="input-action-btn attach-btn" id="attachBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M17 8L10 15L3 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-45 10 11.5)"/>
+                    </svg>
+                </button>
+                <button class="send-btn" id="sendBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M2 10 L18 2 L11 18 L9 11 Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

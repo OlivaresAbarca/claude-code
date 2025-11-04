@@ -1,0 +1,21 @@
+{
+  "name": "floating-chat-mvp",
+  "version": "1.0.0",
+  "description": "MVP de Chat Flotante en Electron - Solo UI",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "keywords": [
+    "electron",
+    "chat",
+    "floating",
+    "ui"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0"
+  }
+}
