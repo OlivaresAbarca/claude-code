@@ -271,6 +271,23 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// WebSearch Toggle
+const webSearchBtn = document.getElementById('webSearchBtn');
+let webSearchEnabled = false;
+
+webSearchBtn.addEventListener('click', () => {
+    webSearchEnabled = !webSearchEnabled;
+    webSearchBtn.setAttribute('data-enabled', webSearchEnabled.toString());
+
+    springAnimation(webSearchBtn);
+
+    if (webSearchEnabled) {
+        console.log('🌐 WebSearch habilitado - El modelo puede buscar en internet');
+    } else {
+        console.log('🚫 WebSearch deshabilitado - El modelo no puede buscar en internet');
+    }
+});
+
 // Add some example interactions on load (demo purposes)
 window.addEventListener('DOMContentLoaded', () => {
     console.log('⚡ Chat Flotante - Estilo Raycast');
@@ -285,6 +302,7 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log('  - Espaciado compacto y funcional');
     console.log('  - Transiciones rápidas y precisas (0.15s)');
     console.log('  - Selector de modelos con agrupación por proveedor');
+    console.log('  - Toggle de WebSearch para habilitar búsqueda en internet');
     console.log('');
     console.log('🚀 Profesional, funcional y elegante');
 });

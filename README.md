@@ -25,6 +25,7 @@ La interfaz presenta un diseño profesional, funcional y elegante inspirado en R
 - 💎 Glassmorphism fuerte con blur 40px y saturación 180%
 - 🪟 **Transparencia real** - puedes ver a través de la ventana
 - 🤖 **Selector de modelos IA** - dropdown agrupado por proveedor (OpenAI, Anthropic, Google)
+- 🌐 **Toggle WebSearch** - botón para habilitar/deshabilitar búsqueda en internet
 - 🎯 Mensajes con hover state - fondo cambia a rgba(44, 44, 46, 0.4)
 - 🔴 Avatar cuadrado con bordes redondeados y acento rojo
 - ⚪ Sin diferencias visuales entre mensajes enviados/recibidos
@@ -90,6 +91,11 @@ npm start
   - Google: Gemini Pro, Gemini Ultra
   - Badges para modelos destacados
   - Animación spring al seleccionar
+- **Toggle WebSearch** para habilitar/deshabilitar búsqueda en internet
+  - Icono de globo que rota cuando está activo
+  - Fondo rojo cuando está habilitado
+  - Estado guardado en variable JavaScript
+  - Feedback visual con animación spring
 - Área de mensajes con scroll personalizado
 - Mensajes del asistente (iridiscentes)
 - Mensajes del usuario (cálidos)
@@ -100,16 +106,18 @@ npm start
 
 ### ✅ Interactividad
 - Selector de modelos con dropdown animado (click para abrir/cerrar)
+- Toggle WebSearch con cambio de estado visual y logs en consola
 - Enter para enviar, Shift+Enter para nueva línea
 - Respuestas simuladas con delay
 - Focus automático en input
 - Scroll automático al recibir mensajes
-- Feedback visual en todos los clics
+- Feedback visual en todos los clics con animación spring
 - Click fuera del dropdown lo cierra automáticamente
 
 ### 🔜 Pendiente (Lógica)
 - Conexión con backend/API
 - Envío real de mensajes
+- **Integración real de WebSearch con API de búsqueda**
 - Autenticación de usuarios
 - Persistencia de mensajes
 - Notificaciones push

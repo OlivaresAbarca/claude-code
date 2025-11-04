@@ -312,6 +312,73 @@ body {
     letter-spacing: 0.02em;
 }
 
+/* WebSearch Toggle Button */
+.websearch-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    margin-left: 8px;
+    background: rgba(28, 28, 30, 0.6);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    backdrop-filter: var(--blur-medium);
+    -webkit-backdrop-filter: var(--blur-medium);
+    -webkit-app-region: no-drag;
+}
+
+.websearch-toggle-btn:hover {
+    background: rgba(28, 28, 30, 0.8);
+    border-color: var(--border-medium);
+    color: var(--text-primary);
+}
+
+.websearch-toggle-btn[data-enabled="true"] {
+    background: rgba(255, 99, 99, 0.15);
+    border-color: var(--raycast-accent);
+    color: var(--raycast-accent);
+}
+
+.websearch-toggle-btn[data-enabled="true"]:hover {
+    background: rgba(255, 99, 99, 0.25);
+    border-color: var(--raycast-accent-hover);
+    color: var(--raycast-accent-hover);
+}
+
+.websearch-toggle-btn:active {
+    transform: scale(0.96);
+    transition: transform 0.1s ease;
+}
+
+.websearch-icon {
+    color: inherit;
+    transition: all 0.15s ease;
+}
+
+.websearch-toggle-btn[data-enabled="true"] .websearch-icon {
+    animation: globeSpin 2s linear infinite;
+}
+
+@keyframes globeSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.websearch-label {
+    color: inherit;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
 /* Mensajes */
 .chat-messages {
     position: relative;
