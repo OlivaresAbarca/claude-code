@@ -103,18 +103,11 @@ function addMessageToChat(type, author, text, time) {
 
     let avatarHTML = '';
     if (type === 'received') {
-        const gradientId = `avatarGradient${++avatarCounter}`;
         avatarHTML = `
             <div class="message-avatar">
-                <svg width="36" height="36" viewBox="0 0 36 36">
-                    <defs>
-                        <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#E8EFFF;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#F3EEFF;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <circle cx="18" cy="18" r="18" fill="url(#${gradientId})"/>
-                    <text x="18" y="24" text-anchor="middle" fill="#6B8AFF" font-size="16" font-weight="600" font-family="-apple-system, SF Pro Rounded">A</text>
+                <svg width="32" height="32" viewBox="0 0 32 32">
+                    <rect width="32" height="32" rx="8" fill="#FF6363"/>
+                    <text x="16" y="21" text-anchor="middle" fill="white" font-size="14" font-weight="600" font-family="-apple-system, SF Pro Text">AI</text>
                 </svg>
             </div>
         `;
@@ -202,17 +195,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Add some example interactions on load (demo purposes)
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('✨ Chat Flotante Minimalista');
+    console.log('⚡ Chat Flotante - Estilo Raycast');
     console.log('🎨 Características implementadas:');
-    console.log('  - Diseño minimalista limpio y refinado');
-    console.log('  - Gradientes sutiles en bordes superior e inferior');
-    console.log('  - Paleta neutral con toques de color');
-    console.log('  - Mensajes con bordes gradiente sutiles');
-    console.log('  - Sombras suaves y discretas');
-    console.log('  - Animaciones sutiles y refinadas');
-    console.log('  - Focus ring azul minimalista en input');
-    console.log('  - Avatares con gradiente suave azul-púrpura');
-    console.log('  - Sin efectos excesivos o distractores');
+    console.log('  - Diseño oscuro elegante inspirado en Raycast');
+    console.log('  - Fondo con blur y profundidad (#1C1C1E)');
+    console.log('  - Acento rojo característico (#FF6363)');
+    console.log('  - Mensajes con hover states sutiles');
+    console.log('  - Avatares cuadrados con bordes redondeados');
+    console.log('  - Input con focus ring rojo');
+    console.log('  - Sombras profundas pero suaves');
+    console.log('  - Espaciado compacto y funcional');
+    console.log('  - Transiciones rápidas y precisas (0.15s)');
     console.log('');
-    console.log('💎 Elegancia en la simplicidad');
+    console.log('🚀 Profesional, funcional y elegante');
 });

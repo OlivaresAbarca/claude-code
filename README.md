@@ -1,39 +1,40 @@
 # Chat Flotante MVP - Electron
 
-MVP de un chat flotante desarrollado en Electron con **diseño minimalista** y **gradientes sutiles**. **Solo UI - sin lógica de backend**.
+MVP de un chat flotante desarrollado en Electron con **diseño inspirado en Raycast**. **Solo UI - sin lógica de backend**.
 
 ## 🎨 Filosofía de Diseño
 
-La interfaz presenta un diseño minimalista, limpio y elegante. Los gradientes sutiles aparecen delicadamente en los bordes, creando profundidad sin distraer. Cada elemento está cuidadosamente refinado para transmitir calma, claridad y sofisticación.
+La interfaz presenta un diseño profesional, funcional y elegante inspirado en Raycast. Fondo oscuro con blur, espaciado compacto, acento rojo característico y una experiencia optimizada para productividad.
 
 ### Elementos Visuales Clave:
-- **Fondo blanco limpio** con gradientes sutiles en bordes superior e inferior
-- **Gradientes delicados** en tonos azul y púrpura muy suaves (#E8EFFF, #F3EEFF)
-- **Bordes con gradiente** en mensajes del asistente (casi imperceptibles)
-- **Paleta neutral** con acentos de color discretos
-- **Sombras suaves** que apenas se notan pero añaden profundidad
-- **Sin efectos excesivos** - sin noise, sin mesh gradients, sin glow
-- **Animaciones sutiles** sin bounce exagerado
-- **Focus ring delicado** en azul cuando se interactúa
-- **Tipografía redondeada** (SF Pro Rounded) para calidez
+- **Tema oscuro** con fondo #1C1C1E y blur fuerte
+- **Acento rojo distintivo** (#FF6363) como Raycast
+- **Superficies elevadas** en #2C2C2E con hover en #3A3A3C
+- **Glassmorphism** con blur 40px y saturación 180%
+- **Sombras profundas** pero suaves para dar depth
+- **Mensajes con hover** - fondo cambia al pasar el cursor
+- **Avatares cuadrados** con bordes redondeados (rx=8)
+- **Espaciado compacto** - diseño eficiente y funcional
+- **Transiciones rápidas** (0.15s) para respuesta inmediata
+- **Tipografía SF Pro** para look profesional
 
 ## ✨ Características UI
 
-- 🤍 Fondo blanco limpio con gradientes sutiles en los bordes
-- 🎨 Gradientes delicados que aparecen solo al inicio y final
-- 💎 Glassmorphism suave con blur 20px (no excesivo)
-- ✨ Mensajes con fondos neutros y bordes sutiles
-- 🔵 Mensajes del asistente: borde gradiente azul-púrpura casi imperceptible
-- ⚪ Mensajes del usuario: fondo blanco con borde simple
-- 💫 Animaciones sutiles sin bounce exagerado
-- 💬 Scroll suave con easing personalizado
-- ✏️ Input con focus ring azul minimalista al enfocar
-- 🟢 Indicador de estado con gradiente suave y pulso delicado
-- ⌨️ Indicador de escritura con dots simples en gris
-- 🎯 Controles de ventana minimalistas con hover sutil
-- 📱 Responsive y adaptativo
-- ♿ Soporte para prefers-reduced-motion
-- 🧘 Sin distracciones - diseño limpio y elegante
+- 🌑 Tema oscuro profesional (#1C1C1E background)
+- ⚡ Acento rojo Raycast (#FF6363) en indicadores y botones
+- 💎 Glassmorphism fuerte con blur 40px y saturación 180%
+- 🎯 Mensajes con hover state - fondo cambia a #2C2C2E
+- 🔴 Avatar cuadrado con bordes redondeados y acento rojo
+- ⚪ Sin diferencias visuales entre mensajes enviados/recibidos
+- 💨 Transiciones rápidas (0.15s) para respuesta instantánea
+- 💬 Scroll minimalista con scrollbar sutil
+- ✏️ Input con focus ring rojo al enfocar
+- 🔴 Indicador de estado con glow rojo pulsante
+- ⌨️ Indicador de escritura simple
+- 🎯 Controles de ventana con hover en #3A3A3C
+- 📱 Espaciado compacto y eficiente
+- 🚀 Diseño optimizado para productividad
+- 🎨 Header y footer con superficie elevada (#2C2C2E)
 
 ## Estructura del Proyecto
 
@@ -119,46 +120,45 @@ npm start
 
 ## 📝 Notas de Desarrollo
 
-Este MVP se enfoca en **elegancia a través de la simplicidad**. El diseño minimalista pone el contenido primero, con gradientes sutiles que añaden profundidad sin distraer. Cada elemento está refinado para transmitir calma y claridad.
+Este MVP se enfoca en **productividad y funcionalidad** inspirado en Raycast. El diseño oscuro con blur profundo y acento rojo crea una experiencia profesional y elegante. Cada interacción es rápida y precisa.
 
-**Filosofía**: "Menos es más" - Sin efectos excesivos, sin distracciones innecesarias. Solo lo esencial, ejecutado a la perfección.
+**Filosofía**: "Profesional, funcional y elegante" - Inspirado en herramientas de productividad modernas.
 
-La lógica de negocio (backend, API, WebSocket, autenticación) se implementará en fases posteriores, manteniendo esta base visual limpia como fundamento.
+La lógica de negocio (backend, API, WebSocket, autenticación) se implementará en fases posteriores, manteniendo esta base visual de Raycast como fundamento.
 
 ## 🖼 Preview
 
 La aplicación presenta:
 - **Ventana**: 400x600px, flotante, siempre visible
-- **Fondo**: Blanco limpio (#FFFFFF) con gradientes sutiles en bordes
-- **Mensajes**: 3 ejemplos precargados con fondos neutros
-- **Input**: Campo expandible con borde azul al enfocar
-- **Controles**: Botones minimalistas con hover discreto
-- **Paleta**: Tonos suaves azul (#E8EFFF) y púrpura (#F3EEFF)
+- **Fondo**: Oscuro con blur (#1C1C1E con backdrop-filter)
+- **Mensajes**: Lista compacta con hover states
+- **Input**: Campo oscuro con focus ring rojo
+- **Controles**: Botones cuadrados con bordes redondeados
+- **Paleta**: Grises oscuros con acento rojo (#FF6363)
 
 ## 🎨 Personalización
 
-Las variables CSS están centralizadas en `:root` (styles.css:7-32):
+Las variables CSS están centralizadas en `:root` (styles.css:7-31):
 
 ```css
-/* Colores Sutiles */
---soft-blue: #E8EFFF;         /* Azul suave para gradientes */
---soft-purple: #F3EEFF;       /* Púrpura suave para gradientes */
---soft-pink: #FFECF2;         /* Rosa suave (opcional) */
+/* Raycast Dark Theme */
+--raycast-bg: #1C1C1E;              /* Fondo principal */
+--raycast-surface: #2C2C2E;         /* Superficies elevadas */
+--raycast-surface-hover: #3A3A3C;   /* Hover states */
+--raycast-accent: #FF6363;          /* Acento rojo */
+--raycast-accent-hover: #FF7A7A;    /* Acento hover */
 
-/* Acentos */
---accent-blue: #6B8AFF;       /* Azul para focus y botones */
---accent-purple: #B57BFF;     /* Púrpura para gradientes activos */
-
-/* Backgrounds */
---bg-primary: #FAFBFC;        /* Fondo mensajes asistente */
---bg-secondary: #FFFFFF;      /* Fondo principal y mensajes usuario */
+/* Text */
+--text-primary: rgba(255, 255, 255, 0.95);
+--text-secondary: rgba(255, 255, 255, 0.65);
+--text-tertiary: rgba(255, 255, 255, 0.45);
 ```
 
 ### Efectos Clave:
-- **Gradiente superior**: `.chat-container::before` - gradiente sutil que se desvanece
-- **Gradiente inferior**: `.chat-container::after` - gradiente sutil que se desvanece
-- **Borde gradiente**: Mensajes del asistente con mask CSS
-- **Blur suave**: `backdrop-filter: blur(20px)` en header/footer
-- **Sombras minimalistas**: `box-shadow` muy sutiles (0.04-0.08 opacity)
-- **Animaciones**: Spring suaves sin exageración
+- **Glassmorphism**: `backdrop-filter: blur(40px) saturate(180%)`
+- **Sombras profundas**: 0.25-0.45 opacity para depth
+- **Hover states**: Cambio a surface-hover en 0.15s
+- **Focus ring**: Rojo con 15% opacity
+- **Avatares**: Cuadrados con rx=8 y fondo rojo
+- **Transiciones**: Todas usan 0.15s para respuesta rápida
 - **Tamaño de ventana**: `main.js` líneas 8-9
